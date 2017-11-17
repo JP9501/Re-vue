@@ -1,0 +1,47 @@
+const path =require('path');
+const HtmlWP = require('html-webpack-plugun');
+const CleanWp = require('clean-webpack-plugin');
+
+module.exports ={
+    entry:path.resolve(__dirnname,'./src/js/main.js'),
+    output:{
+        path:path.resolve(__dirname,'./dist')
+    },
+    plugins:[
+        new HtmlWP({
+            template:'./src/index.html',
+            filename:'index.html',
+            inject:'body'
+        }),
+        new CleanWP(['dist'])
+    ],
+    module:{
+        {
+            test:'/\.css$/',
+            use:['style-loader','css-loader']
+        },
+        {
+            test:/\.less$/,
+            use:['style-loader','css-loader','less-loader']
+        },
+        {
+            teat:/\.(html|tpl)$/,
+            use:['html-loader']
+        },
+        {
+            test:/\.(png|jpeg|gif|jpg|svg|mp3)$/,
+            use:[
+                {loader:'url-loader',options:{limit:10240}}
+            ]
+        },
+        {
+            test:/\.js$/,
+            use:['babel-loader'],
+            exclude:path.resolve(__dirname,'node_modules')
+        },
+        {
+            test:/\.vue$/,
+            use:['vue-loader']
+        }
+    }
+}
