@@ -12,10 +12,15 @@ module.exports = {
     },
     // 插件配置
     plugins: [
-        new HtmlWP({
+        new HtmlWP({    
             template: './src/index.html',
             filename: 'index.html',
-            inject: 'body'
+            inject: 'body',
+            minify:{ // 压缩优化HTML页面
+                collapseWhitespace:true, // 合并空白字符
+                removeComments:true, // 移除注释
+                removeAttributeQuotes:true // 移除属性上的引号
+            }
         }),
         new CleanWP(['dist'])
     ],
@@ -55,7 +60,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: [ 'babel-loader' ],
-                exclude: path.resolve(__dirname, 'node_modules')
+                exclude: path.resolve(__dirname, 'node_modules')//排除第3方包
             },
 
             // vue

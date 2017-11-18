@@ -7,6 +7,53 @@
     <title>Document</title>
 </head>
 <body>
-    <div id='app'></div>
+    <div id='app'>
+        <!-- <p>{{msg}}</p>
+        <router-view></router-view>
+        <router-link to='/login?keyword=1122'>登陆</router-link>
+        <router-link :to='good'>列表</router-link> -->
+    </div>
 </body>
 </html>
+<!-- <script src='../node_modules/vue/dist/vue.min.js'></script>
+<script src='../node_modules/vue-router/dist/vue-router.min.js'></script> -->
+<!-- <script>
+    var login = {
+    template:`
+    <p>这是登陆页面</p>
+    `,
+    data(){
+        return {
+
+        }
+    }
+}
+var  goods ={
+    template:`
+    <p>这是列表页面</p>
+    `,
+    data(){
+        return{
+
+        }
+    }
+}
+var vm = new Vue({
+    el:'#app',
+    data:{
+        good:{
+            path:'/goods',
+            query:{
+                id:123
+            },
+        },
+       msg:'这是一个msg',
+    },
+    router:new VueRouter({
+        routes:[
+            { path:'/login',component:login},
+            { path:'/goods',component:goods}
+        ]
+    })
+})
+</script> -->
