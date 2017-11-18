@@ -1,6 +1,7 @@
 <template>
     <header>
   <mt-header fixed title="小买卖"></mt-header>
+  <i></i>
     </header>
 </template>
 <script>
@@ -9,6 +10,10 @@
     }
 </script>
 <style scoped>
-
+    i{
+        display:block;
+        height: 40px;
+        width: 100%;
+    }
 </style>
 
