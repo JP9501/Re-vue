@@ -1,5 +1,6 @@
 <template>
   <footer>
+	  <i></i>
       <nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" href="#tabbar">
 				<span class="mui-icon mui-icon-home"></span>
@@ -26,6 +27,10 @@
     }    
 </script>
 <style scoped>
-
+i{
+	display: block;
+	height: 50px;
+	width: 100%;
+}
 </style>
 

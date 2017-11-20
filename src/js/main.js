@@ -15,11 +15,13 @@ import  VueRouter  from 'vue-router';
 import AppComponent from '../component/App.vue';
 //导入自定义api路径
 import apiConfig from './api-config';
-
+//导入一个自定义过滤器插件
+import Filter from '../filter';
 //启用插件
 Vue.use(MintUi);
 Vue.use(Component);
 Vue.use(vueRouter);
+Vue.use(Filter);
 //导入配置
 Vue.prototype.axios = axios;//将axios设置成vue的全局原型属性，这样别的页面也能用了
 Vue.prototype.api= apiConfig //配置全局全局
@@ -27,6 +29,12 @@ Vue.prototype.api= apiConfig //配置全局全局
 import routerConfig from '../router';
 //导入配置好的公共样式组件
 import Component from '../component/common';
+//定义一个全局过滤器
+// Vue.filter('date',(tiem)=>{
+//     let date = new Date(tiem);
+//     return `${date.getFullYear()}-${date.getMilliseconds()+1}-${date.getDate()}`
+// })
+
 new Vue({
    el:'#app',
    render(c){

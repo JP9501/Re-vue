@@ -4,7 +4,8 @@ export default{
    getLunbo:`${apiUrl}/getlunbo`,
   
     //新闻资讯区域
-    getnewslist:`${apiUrl}/getnewslist`,
-    get:`${apiUrl}/getnew/`//到时候需要自己加入id
+    getXW:`${apiUrl}/getnewslist`,
+    getXQ:`${apiUrl}/getnew/`//到时候需要自己加入id
+    //图片分享区域
 
 }

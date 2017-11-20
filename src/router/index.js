@@ -9,6 +9,6 @@ export default {
         {name:'i',path:'/index',component:HomeComponent},
         //新闻路由配置
         {name:'nl',path:'/news/list',component:NewsListComponent},
-        {name:'nd',path:'/news/detail/:id',compenont:NewsDetailComponent},
+        {name:'nd',path:'/news/detail/:id',component:NewsDetailComponent},
     ]
 }
